@@ -6,6 +6,13 @@ import classes from './App.module.css';
 import ProductData from './ProductData';
 
 function App() {
+
+  const mydate = new Date();
+  const hrs = mydate.getHours() > 9 ? new Date().getHours() : '0' + new Date().getHours();
+  
+  const mins = mydate.getMinutes() > 0 ? new Date().getMinutes() : '0' + new Date().getHours();
+
+
   return (
     <>
       <nav className={classes.topbar} >
@@ -14,7 +21,14 @@ function App() {
       <div className={classes.MainContainer}>
 
         <div className={classes.ProductPreview}>
-          <img src="https://imgur.com/iOeUBV7.png" alt="" />
+          <img src="https://imgur.com/iOeUBV7.png" alt="Product Preview" />
+          {/* <div>
+            <p className={classes.productTime} >{`${hrs}:${mins}`}</p>
+          </div> */}
+          <div className={classes.heartBeat} >
+            <img src="/heart.png" alt="" />
+            <p>{Math.ceil(Math.random()*90)}</p>
+          </div>
         </div>
 
         <div className={classes.ProductData}>
@@ -30,7 +44,7 @@ function App() {
           <h3 className={classes.SectionHeading}>Features</h3>
           <div>
             <button className={[classes.featuresBtn, classes.selectedFeatureItem].join(' ')} >Time</button>
-            <button className={classes.featuresBtn} >HeartRate</button>
+            <button className={classes.featuresBtn} >Heart Rate</button>
           </div>
           <button className={classes.primaryBtn} >Buy Now</button>
         </div>
