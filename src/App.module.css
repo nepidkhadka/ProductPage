@@ -1,3 +1,6 @@
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
 .topbar{
     height: 4rem;
     background-color: #232f3e;
@@ -13,6 +16,11 @@
     object-fit: contain;
 }
 
+.ProductTitle{
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
 .MainContainer{
     margin-top: 4rem;
     padding: 2rem 4rem;
@@ -25,11 +33,60 @@
 .ProductPreview{
     flex-basis: 50%;
 }
-.ProductPreview img{
-    width: 100%;
 
+.ProductPreview img{
+    width: 90%;
 }
 
 .ProductData{
     flex-basis: 50%;
+}
+
+.ProductDesc{
+    font-weight: 500;
+}
+
+.SectionHeading{
+    font-size: 1.6rem;
+}
+
+.ProductImg{
+    margin-right: 1rem;
+    width: 100%;
+    max-width: 80px;
+    cursor: pointer;   
+}
+
+.selectedimg{
+    border: 2px solid tomato;
+    border-radius: 8px;
+}
+
+.featuresBtn{
+    text-align: center;
+    min-width: 80px;
+    font-size: 1.1rem;
+    color: aliceblue;
+    background-color: teal;
+    border: transparent;
+    padding: 0.8rem 2rem;
+    margin-right: 1rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.selectedFeatureItem{
+    color: white;
+    background-color: gray;
+}
+
+.primaryBtn{
+    background-color: teal;
+    border: none;
+    padding: 0.8rem 2rem;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: white;
+    border-radius: 1rem;
 }
