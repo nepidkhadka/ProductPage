@@ -1,0 +1,61 @@
+.ProductTitle{
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+.ProductData{
+    flex-basis: 50%;
+}
+
+.ProductDesc{
+    font-weight: 500;
+}
+
+.SectionHeading{
+    font-size: 1.6rem;
+}
+
+.ProductImg{
+    margin-right: 1rem;
+    width: 100%;
+    max-width: 80px;
+    cursor: pointer;   
+}
+
+.selectedimg{
+    border: 2px solid teal;
+    border-radius: 8px;
+}
+
+.featuresBtn{
+    text-align: center;
+    min-width: 80px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: black;
+    background-color:#cacaca;
+    border: transparent;
+    padding: 0.8rem 2rem;
+    margin-right: 1rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.selectedFeatureItem{
+    color: white;
+    background-color: gray;
+}
+
+.primaryBtn{
+    width: 315px;
+    font-weight: 600;
+    background-color: teal;
+    border: none;
+    padding: 0.8rem 2rem;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+}
