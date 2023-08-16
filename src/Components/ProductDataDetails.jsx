@@ -4,8 +4,6 @@ import classes from '..//ProductData.module.css'
 
 function ProductDataDetails(props) {
 
-  // console.log(props.data);
-
   const colorOptions = props.data.colorOptions.map((items, pos)=>{
 
     const classArr = [classes.ProductImg];
@@ -14,25 +12,25 @@ function ProductDataDetails(props) {
     }
 
     return(
-      <img key={pos} className={classArr.join(' ')} src={items.imageUrl} alt={items.styleName} />
+      <img key={pos} onClick={()=>{props.onColorOptionClick(pos)}} className={classArr.join(' ')} src={items.imageUrl} alt={items.styleName}/>
      );
   })
+
+
 
   const featureList = props.data.featureList.map((items,pos)=>{
 
     const classArr = [classes.featuresBtn]
-
-    if(pos == 0){
+    if(props.currentPOS == 0){
         classArr.push(classes.selectedFeatureItem);
     }
 
     return(
-      <button key={pos} className={classArr.join(' ')}>{items}</button>
-
+      <button onClick={()=>{props.setshowHeartBeat(pos)}} key={pos} className={classArr.join(' ')}>{items}</button>
     )
   })
-
-  console.log(featureList);
+  
+  
   return (
     <div className={classes.ProductData}>
           <h1 className={classes.ProductTitle}>{props.data.title}</h1>
