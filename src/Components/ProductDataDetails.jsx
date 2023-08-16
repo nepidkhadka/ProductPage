@@ -7,7 +7,7 @@ function ProductDataDetails(props) {
   const colorOptions = props.data.colorOptions.map((items, pos)=>{
 
     const classArr = [classes.ProductImg];
-    if(pos == 0){
+    if(pos == props.currentImagePosition){
       classArr.push(classes.selectedimg);
     }
 
@@ -21,12 +21,14 @@ function ProductDataDetails(props) {
   const featureList = props.data.featureList.map((items,pos)=>{
 
     const classArr = [classes.featuresBtn]
-    if(props.currentPOS == 0){
+    if(props.HeartBeatValue && pos==1){
         classArr.push(classes.selectedFeatureItem);
+    }else if(!props.HeartBeatValue && pos==0){
+      classArr.push(classes.selectedFeatureItem);
     }
 
     return(
-      <button onClick={()=>{props.setshowHeartBeat(pos)}} key={pos} className={classArr.join(' ')}>{items}</button>
+      <button onClick={()=>{props.onFeaturedItemsClick(pos)}} key={pos} className={classArr.join(' ')}>{items}</button>
     )
   })
   
