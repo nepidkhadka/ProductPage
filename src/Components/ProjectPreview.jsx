@@ -4,7 +4,10 @@ import classes from '..//projectPreview.module.css'
 const ProjectPreview = (props) => {
 
     const mydate = new Date();
-    const hrs = mydate.getHours() > 9 ? new Date().getHours() : '0' + new Date().getHours();
+    let hrs = mydate.getHours() ;
+    hrs = hrs%12;
+    hrs = hrs || 12;
+    hrs = hrs.toString().padStart(2,'0');
     const mins = mydate.getMinutes() > 0 ? new Date().getMinutes() : '0' + new Date().getHours();
 
 
